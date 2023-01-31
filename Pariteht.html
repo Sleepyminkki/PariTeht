@@ -8,7 +8,7 @@
    <meta content="width=device-width, initial-scale=1" name="viewport" />
    <meta charset="utf-8">
    <link rel="stylesheet" href="paritehtävä.css">
-   <script src="Pariteht.js"></script>
+   <script src="Pariteht.js" defer></script>
 </head>
 <body>
     <div class="flex">
@@ -90,8 +90,31 @@
         <div class="section1" id="anchor-ominaisuudet">
             <p class="otsikko">Olion ominaisuudet</p>
             <p class="tekstiosionTekstiosio">
-                teksti
-            </p>
+              Olion ominaisuuksilla (Object properties) viitataan olion jälkeen tulevaan muuttujaan. Ominaisuuksia voi lisätä ja poistaa aina tarvittaessa.
+              Ominaisuuksiin voi viitata 2 eri tavalla: <br>
+                    -olionNimi.ominaisuus <br>
+                    -olionNimi["ominaisuus"]  <br>
+
+          </p>
+            <div class="codeArea">
+              <pre><code> 
+  const oppilas = {
+    nimi: "Jaakko",
+    ika: 18,
+    silmienvari: "sininen"
+  }
+
+  // Lisää ominaisuuden
+  oppilas.arvosana = "10";
+
+  // Poistaa ominaisuuden
+  delete oppilas.ika
+
+  var teksti = document.getElementById("ominaisuuksia").innerHTML = 
+  "Nimi: " + oppilas.nimi + " Ikä: " + oppilas.ika + " Silmienväri: " + oppilas["silmienvari"] + " Arvosana: " + oppilas["arvosana"];
+              </code></pre> 
+              <p id="ominaisuuksia"></p>
+            </div>
         </div>
 
         <div class="section1" id="anchor-konstruktorit">
@@ -189,44 +212,50 @@
               </p>
               <div class="codeArea">
                 <pre><code> 
-    //Periytymisellä pystyy käyttämään koodia uudelleen, lisätä siihen uusia luokkia ja muokata sitä.
-    class Puhelin {
-      constructor(merkki) {
-        this.merkki = merkki;
-      }
-      malli() {
-        return "Minulla on " + this.merkki;
-      }
-    }
-    
-    // Luokka Väri on jatkoa luokalle Puhelin
-    class Väri extends Puhelin {
-      constructor(merkki, väri) {
-        super(merkki);
+//Periytymisellä pystyy käyttämään koodia uudelleen, lisätä siihen uusia luokkia ja muokata sitä.
+class Puhelin {
+  constructor(merkki) {
+    this.merkki = merkki;
+  }
+  malli() {
+    return "Minulla on " + this.merkki;
+  }
+}
 
-        // Väri luokka lisää värin puhelimen merkkiin
-        this.väri = väri;
-      }
-      vari() {
-        return this.malli() + ", se on " + this.väri;
-      }
-    }
-  
-    // Koko lisää ko'on puhelimen värille ja merkille
-    class Koko extends Väri {
-      constructor(merkki, väri, koko) {
-        super(merkki, väri);
-        this.koko = koko;
-      }
-      kaikki() {
-        return this.malli() + ", se on " + this.väri + ". Sen koko on " + this.koko;
-      }
-    }
-  
-    let kokoPuhelin = new Koko("Samsung", "vihreä", "29cm²");
-    console.log(kokoPuhelin.malli());  // Minulla on Samsung
-    console.log(kokoPuhelin.vari());   // Minulla on Samsung, se on vihreä
-    console.log(kokoPuhelin.kaikki()); // Minulla on Samsung, se on vihreä. Sen koko on 29cm²
+// Luokka Väri on jatkoa luokalle Puhelin
+class Väri extends Puhelin {
+  constructor(merkki, väri) {
+    super(merkki);
+
+    // Väri luokka lisää värin puhelimen merkkiin
+    this.väri = väri;
+  }
+  vari() {
+    return this.malli() + ", se on " + this.väri;
+  }
+}
+
+// Koko lisää ko'on puhelimen värille ja merkille
+class Koko extends Väri {
+  constructor(merkki, väri, koko) {
+    super(merkki, väri);
+    this.koko = koko;
+  }
+  kaikki() {
+    return this.malli() + ", se on " + this.väri + ". Sen koko on " + this.koko;
+  }
+}
+
+let kokoPuhelin = new Koko("Samsung", "vihreä", "29cm²");
+
+console.log(kokoPuhelin.malli());  
+// Output: Minulla on Samsung
+
+console.log(kokoPuhelin.vari());   
+// Output: Minulla on Samsung, se on vihreä
+
+console.log(kokoPuhelin.kaikki()); 
+// Output: Minulla on Samsung, se on vihreä. Sen koko on 29cm²
                 </code></pre> 
               </div>
           </div>
