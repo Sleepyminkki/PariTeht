@@ -15,9 +15,9 @@
         <div class="div1">
             <div class="alkuTietoTeksti">
               <p>
-                Olio-ohjelmointi (OOP, <i> Object-oriented programming</i>) on ohjelmointitapa, jossa tarvittava lopputulos saadaan aikaan 
-                erilaisten olioiden yhteistoiminnalla. <br>
-                Olio-ohjelmointia on kahta eri tyyppiä: Luokkapohjainen ja prototyyppipohjainen: <br>
+                &nbsp Olio-ohjelmointi (OOP, <i> Object-oriented programming</i>) on ohjelmointitapa, jossa tarvittava lopputulos saadaan aikaan <br>
+                &nbsp erilaisten olioiden yhteistoiminnalla. <br>
+                &nbsp Olio-ohjelmointia on kahta eri tyyppiä: Luokkapohjainen ja prototyyppipohjainen: <br>
                 &ThickSpace;&ThickSpace;   -Luokkapohjaisessa ohjelmoinnissa oliot saavat toiminnallisuuden ja tilan luokan jäsenien mukaan. <br>
                 &ThickSpace;&ThickSpace;   -Prototyyppiohjelmoinnissa oliot saavat toimintansa prototyyppioliolta.
                 <!--wikipedia olio-ohjelmointi-->
@@ -50,16 +50,6 @@
             </div>
         </div>
     </div>
-    
-
-    <!-- 
-      <div class="codeArea">
-        <pre><code> 
-          
-        </code></pre> 
-      </div>
-    -->
-
 
     <div class="tekstiosio">
 
@@ -82,9 +72,9 @@
     </div>
 
     <div class="section1" id="anchor-perusolio">
-        <p>Perusolion toteutus</p>
+        <p class = "otsikko">Perusolion toteutus</p>
         <p class="tekstiosionTekstiosio">
-            teksti
+            Perusoliossa voi laittaa niin monta ominaisuutta ja arvoa kuin haluaa.
         </p>
 
           <div class="codeArea">
@@ -131,7 +121,7 @@
         <div class="section1" id="anchor-konstruktorit">
           <p class="otsikko">Konstruktorit</p>
           <p class="tekstiosionTekstiosio">
-              Konstruktori on metodi jolla alustetaan luokan muuttujat
+              Konstruktori on metodi jolla alustetaan luokan muuttujat.
           </p>
           <div class="codeArea">
             <pre><code>
@@ -168,7 +158,7 @@
       <div class="section1" id="anchor-kapselointi">
           <p class="otsikko">Kapselointi</p>
           <p class="tekstiosionTekstiosio">
-            Kapselointi (Encapsulation) on tiedon lukitsemista jotta sitä ei voi enää muokata myöhemmin. Kapselointi saadaan
+            Kapselointi (Encapsulation) on tiedon lukitsemista jotta sitä ei voi enää muokata myöhemmin. Kapselointi saadaan aikaan risuaita merkillä.
           </p>
           <div class="codeArea">
             <pre><code>
@@ -217,20 +207,19 @@
           <div class="section1" id="anchor-periyttaminen">
               <p class="otsikko">Periyttäminen</p>
               <p class="tekstiosionTekstiosio">
-                Periyttäminen (Inheritance) on luokan jatkamista. Eli luokkaa voidaan periydyttää toiseen luokkaan, joka perii perityn luokan <br>
+                Periyttäminen (Inheritance) on luokan jatkamista. Eli luokkaa voidaan periydyttää toiseen luokkaan, joka perii perityn luokan
                 valmiiksi julistetut muuttujat mukanaan. Tähän uuteen jatkettuun luokkaan voidaan lisätä myös omia muuttujia.
-                
-                extendausta, eli luokkaa jatketaan extendaamisella toiseen luokkaan, viitaten; Puhelin, Väri, Koko
+                extendausta, eli luokkaa jatketaan extendaamisella toiseen luokkaan, viitaten; Puhelin, Väri, Koko.
               </p>
               <div class="codeArea">
                 <pre><code> 
     //Periytymisellä pystyy käyttämään koodia uudelleen, lisätä siihen uusia luokkia ja muokata sitä.
     class Puhelin {
       constructor(merkki) {
-        this.puhelinM = merkki;
+        this.merkki = merkki;
       }
       malli() {
-        return "Minulla on " + this.puhelinM;
+        return "Minulla on " + this.merkki;
       }
     }
     
@@ -258,56 +247,14 @@
       }
     }
   
-    let kokoPuhelin = new Koko("Samsung", "vihreä", "18cm");
-    console.log(kokoPuhelin.malli());
-    console.log(kokoPuhelin.vari());
-    console.log(kokoPuhelin.kaikki());
+    let kokoPuhelin = new Koko("Samsung", "vihreä", "29cm²");
+    console.log(kokoPuhelin.malli());  // Minulla on Samsung
+    console.log(kokoPuhelin.vari());   // Minulla on Samsung, se on vihreä
+    console.log(kokoPuhelin.kaikki()); // Minulla on Samsung, se on vihreä. Sen koko on 29cm²
                 </code></pre> 
               </div>
           </div>
-
-<!-- Konstruktori on metodi jolla alustetaan luokan muuttujat -->
-<!-- periytymä on extendausta, eli
-  luokkaa jatketaan extendaamisella toiseen luokkaan, viitaten; Puhelin, Väri, Koko -->
-
-
     </div>
     
 </body>
 </html>
-
-
-<!-- <div>
-  <form action="javascript:void(0);">
-    <input type="text" id="fname" placeholder="Etunimi" class="etunimi"><br>
-    <input type="text" id="lname" placeholder="Sukunimi" class="sukunimi"><br>
-    <input type="text" id="fname" placeholder="Ikä" class="ika"><br>
-    <input type="text" id="lname" placeholder="Silmänvari" class="silmanvari"><br>
-    <button type="submit" onclick="kysy()">Lähetä</button>
-</form>
-<p id="tulokset">Tähän tulee tulokset</p>
-</div>
-    <div class="codeArea">
-      <pre><code>
-        // Olio Person
-        function Person(first, last, age, eye) {
-          this.firstName = first;
-          this.lastName = last;
-          this.age = age;
-          this.eyeColor = eye;
-      }
-
-      //Kysyy Tarvittavan tiedon
-      function kysy() {
-              etunimi = String(document.getElementsByClassName("etunimi")[0].value);
-              sukunimi = String(document.getElementsByClassName("sukunimi")[0].value);
-              ika = String(document.getElementsByClassName("ika")[0].value);
-              silmavari = String(document.getElementsByClassName("silmanvari")[0].value);
-
-              // Yhdistää saadut arvot yhdeksi
-              var kayttaja = new Person(etunimi, sukunimi, ika, silmavari)
-              document.getElementById("tulokset").innerHTML = kayttaja.firstName + ", " + kayttaja.lastName +
-              ", " + kayttaja.age + ", " + kayttaja.eyeColor;
-      }
-      </code></pre>
-    </div> -->

@@ -33,10 +33,10 @@ let olio = {
   //Periytymisellä pystyy käyttämään koodia uudelleen, lisätä siihen ja muokata sitä.
  class Puhelin {
    constructor(merkki) {
-     this.puhelinM = merkki;
+     this.merkki = merkki;
    }
    malli() {
-     return "Minulla on " + this.puhelinM;
+     return "Minulla on " + this.merkki;
    }
  }
 
@@ -60,7 +60,7 @@ let olio = {
    }
  }
 
- let kokoPuhelin = new Koko("Samsung", "vihreä", "18cm");
+ let kokoPuhelin = new Koko("Samsung", "vihreä", "29cm²");
  console.log(kokoPuhelin.malli());
  console.log(kokoPuhelin.vari());
  console.log(kokoPuhelin.kaikki());
