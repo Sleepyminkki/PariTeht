@@ -151,7 +151,6 @@ function kysy() {
       ", " + kayttaja.age + ", " + kayttaja.eyeColor;
 }
 
-
 //
 const henkilo = {
 nimi: "kalle",
