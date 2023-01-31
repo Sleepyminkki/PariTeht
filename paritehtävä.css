@@ -12,7 +12,7 @@ ul li{
 }
 a{
     text-decoration: underline;
-    color: rgb(111, 124, 211);
+    color: rgb(171, 170, 181);
     line-height: 30px;
 }
 
@@ -23,10 +23,6 @@ li a:hover{
 .alkuTietoTeksti{
     line-height: 30px;
     padding: 5px;
-}
-.linkArea{
-    background-color: #49484b;
-    height: 200px;
 }
 .flex{
     width: 100%;
@@ -39,9 +35,10 @@ li a:hover{
     height: 200px;
 }
 .div2 {
-    background-color: #49484e;
+    background-color: #373739;
     width: 25%;
     height: 200px;
+    padding-bottom: 20px;
 }
 .tekstiosio{
     padding: 1rem;
