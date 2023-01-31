@@ -104,10 +104,20 @@ let olio = {
   mersu.age = 1234;
   mersu.getAll();
 
+  const oppilas = {
+    nimi: "Jaakko",
+    ika: 18,
+    silmienvari: "sininen"
+  }
 
+  // Lisää ominaisuuden
+  oppilas.arvosana = "10";
 
+  // Poistaa ominaisuuden
+  delete oppilas.ika
 
-
+  var teksti = document.getElementById("ominaisuuksia").innerHTML = 
+  "Nimi: " + oppilas.nimi + " Ikä: " + oppilas.ika + " Silmienväri: " + oppilas["silmienvari"] + " Arvosana: " + oppilas["arvosana"];
 
 
 
@@ -140,8 +150,6 @@ function kysy() {
       document.getElementById("tulokset").innerHTML = kayttaja.firstName + ", " + kayttaja.lastName +
       ", " + kayttaja.age + ", " + kayttaja.eyeColor;
 }
-
-
 
 
 //
