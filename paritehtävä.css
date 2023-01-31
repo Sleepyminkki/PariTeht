@@ -12,12 +12,12 @@ ul li{
 }
 a{
     text-decoration: underline;
-    color: rgb(52, 42, 142);
+    color: rgb(54, 42, 165);
     line-height: 30px;
 }
 
 li a:hover{
-    color: red;
+    color: whitesmoke;
 }
 
 .alkuTietoTeksti{
