@@ -81,9 +81,9 @@
     </div>
 
     <div class="section1" id="anchor-perusolio">
-        <p>Perusolion toteutus</p>
+        <p class = "otsikko">Perusolion toteutus</p>
         <p class="tekstiosionTekstiosio">
-            teksti
+            Perusoliossa voi laittaa niin monta ominaisuutta ja arvoa kuin haluaa.
         </p>
 
           <div class="codeArea">
@@ -193,7 +193,7 @@
           <div class="section1" id="anchor-periyttaminen">
               <p class="otsikko">Periyttäminen</p>
               <p class="tekstiosionTekstiosio">
-                Periyttäminen (Inheritance) on luokan jatkamista. Eli luokkaa voidaan periydyttää toiseen luokkaan, joka perii perityn luokan <br>
+                Periyttäminen (Inheritance) on luokan jatkamista. Eli luokkaa voidaan periydyttää toiseen luokkaan, joka perii perityn luokan
                 valmiiksi julistetut muuttujat mukanaan. Tähän uuteen jatkettuun luokkaan voidaan lisätä myös omia muuttujia.
                 
                 extendausta, eli luokkaa jatketaan extendaamisella toiseen luokkaan, viitaten; Puhelin, Väri, Koko
@@ -203,10 +203,10 @@
     //Periytymisellä pystyy käyttämään koodia uudelleen, lisätä siihen uusia luokkia ja muokata sitä.
     class Puhelin {
       constructor(merkki) {
-        this.puhelinM = merkki;
+        this.merkki = merkki;
       }
       malli() {
-        return "Minulla on " + this.puhelinM;
+        return "Minulla on " + this.merkki;
       }
     }
     
@@ -234,10 +234,10 @@
       }
     }
   
-    let kokoPuhelin = new Koko("Samsung", "vihreä", "18cm");
-    console.log(kokoPuhelin.malli());
-    console.log(kokoPuhelin.vari());
-    console.log(kokoPuhelin.kaikki());
+    let kokoPuhelin = new Koko("Samsung", "vihreä", "29cm²");
+    console.log(kokoPuhelin.malli());  // Minulla on Samsung
+    console.log(kokoPuhelin.vari());   // Minulla on Samsung, se on vihreä
+    console.log(kokoPuhelin.kaikki()); // Minulla on Samsung, se on vihreä. Sen koko on 29cm²
                 </code></pre> 
               </div>
           </div>
