@@ -7,14 +7,283 @@
  </title>
    <meta content="width=device-width, initial-scale=1" name="viewport" />
    <meta charset="utf-8">
-   <script src="https://kit.fontawesome.com/573bfe5711.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="Pariteht.css">
-   <script src="Pariteht.js"></script>
+   <link rel="stylesheet" href="muisti.css">
+   <script src="muisti.js"></script>
 </head>
 <body>
-  <div>
-    <p>Otsikko</p>
-    <p>Sisältö</p>
-  </div>
+    <div class="flex">
+        <div class="div1">
+            <div class="alkuTietoTeksti">
+              <p>
+                Olio-ohjelmointi (OOP, <i> Object-oriented programming</i>) on ohjelmointitapa, jossa tarvittava lopputulos saadaan aikaan 
+                erilaisten olioiden yhteistoiminnalla. <br>
+                Olio-ohjelmointia on kahta eri tyyppiä: Luokkapohjainen ja prototyyppipohjainen: <br>
+                &ThickSpace;&ThickSpace;   -Luokkapohjaisessa ohjelmoinnissa oliot saavat toiminnallisuuden ja tilan luokan jäsenien mukaan. <br>
+                &ThickSpace;&ThickSpace;   -Prototyyppiohjelmoinnissa oliot saavat toimintansa prototyyppioliolta.
+              </p>
+            </div>
+        </div> 
+
+          <div class="div2">
+            <div class="linkArea">
+              <ul>
+                  <li>
+                    <a href="#anchor-keskeiset">Keskeiset sisäänrakennetut oliot</a>
+                  </li>
+                  <li>
+                    <a href="#anchor-perusolio">Perusolion toteutus</a>
+                  </li>
+                  <li>
+                    <a href="#anchor-ominaisuudet">Olion ominaisuudet</a>
+                  </li>
+                  <li>
+                    <a href="#anchor-konstruktorit">Konstruktorit</a>
+                  </li>
+                  <li>
+                    <a href="#anchor-kapselointi">Kapselointi</a>
+                  </li>
+                  <li>
+                    <a href="#anchor-periyttaminen">Periyttäminen</a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- 
+      <div class="codeArea">
+        <pre><code> 
+          
+        </code></pre> 
+      </div>
+    -->
+
+
+    <div class="tekstiosio">
+
+      <div class="section1" id="anchor-keskeiset">
+        <p class="otsikko">Keskeiset sisäänrakennetut oliot</p>
+        <p class="tekstiosionTekstiosio">
+          Keskeiset sisäänrakennetut oliot (Key built-in objects) ovat selaimissa itsestääntoimivia olioita, jotka ovat saatavilla 
+          riippumatta selaimen lataamasta sivusta. <br>
+          Näitä sisäänrakennettuja olioita ovat:
+          <ul>
+            <li>-<code class="green">Array</code> olio</li>
+            <li>-<code class="green">Boolean</code> olio</li>
+            <li>-<code class="green">Date</code> olio</li>
+            <li>-<code class="green">Math</code> olio</li>
+            <li>-<code class="green">Number</code> olio</li>
+            <li>-<code class="green">String</code> olio</li>
+            <li>-<code class="green">RegExp</code> olio</li>
+          </ul>
+        </p>
+    </div>
+
+    <div class="section1" id="anchor-perusolio">
+        <p>Perusolion toteutus</p>
+        <p class="tekstiosionTekstiosio">
+            teksti
+        </p>
+
+          <div class="codeArea">
+            <pre><code> 
+  const henkilo = {
+    nimi: "kalle",
+    ika: 18,
+    silmienvari: "siniset"
+  }
+            </code></pre> 
+          </div>
+      </div>
+    
+        <div class="section1" id="anchor-ominaisuudet">
+            <p class="otsikko">Olion ominaisuudet</p>
+            <p class="tekstiosionTekstiosio">
+                teksti
+            </p>
+        </div>
+
+        <div class="section1" id="anchor-konstruktorit">
+          <p class="otsikko">Konstruktorit</p>
+          <p class="tekstiosionTekstiosio">
+              Konstruktori on metodi jolla alustetaan luokan muuttujat
+          </p>
+          <div class="codeArea">
+            <pre><code>
+  class Visitor {
+    constructor(name) {
+      this.name = name;
+    }
+    present() {
+      return 'Name is ' + this.name;
+    }
+  }
+  
+  class Employee extends Visitor {
+    constructor(name, age) {
+      super(name);
+      this.age = age;
+    }
+    show() {
+      return this.present() + ', Age ' + this.age;
+    }
+  }
+  
+  visitor = new Visitor("Jussi");
+  console.log(visitor.present());
+  // Output: Name is Jussi
+  
+  employee = new Employee("Jaska",20);
+  console.log(employee.show());
+  // Output: Name is Jaska, Age 20
+            </code></pre>
+          </div>
+      </div>
+  
+      <div class="section1" id="anchor-kapselointi">
+          <p class="otsikko">Kapselointi</p>
+          <p class="tekstiosionTekstiosio">
+            Kapselointi (Encapsulation) on tiedon lukitsemista jotta sitä ei voi enää muokata myöhemmin. Kapselointi saadaan
+          </p>
+          <div class="codeArea">
+            <pre><code>
+  class Auto {
+    #age;
+    constructor(model, color) {
+      this.model = model;
+      this.color = color;
+      // Auton ikä on # merkitty, joka tarkoittaa että sen arvoa ei voi muuttaa
+      this.#age = this.getYear();
+    }
+    setColor(color) {
+      this.color = color;
+    }
+    getColor() {
+      return this.color;
+    }
+    getYear() {
+      return 2023;
+    }
+
+    getAll() {
+      console.log(this.model);
+      console.log(this.color);
+      console.log(this.#age);
+    }
+  }
+
+  mersu = new Auto("mersu", "green");
+  mersu.getAll();
+  // Output: mersu, green, 2023
+
+  mersu.color = "white";
+  mersu.getAll();
+  // Output; mersu, white, 2023
+
+  mersu.age = 1234;
+  mersu.getAll();
+  // Output: mersu, white, 2023
+  // mersu.age = 1234; Ei pysty vaihtamaan jo valmiiksi annettua arvoa 2023
+
+            </code></pre> 
+          </div>
+        </div>
+      
+          <div class="section1" id="anchor-periyttaminen">
+              <p class="otsikko">Periyttäminen</p>
+              <p class="tekstiosionTekstiosio">
+                Periyttäminen (Inheritance) on luokan jatkamista. Eli luokkaa voidaan periydyttää toiseen luokkaan, joka perii perityn luokan <br>
+                valmiiksi julistetut muuttujat mukanaan. Tähän uuteen jatkettuun luokkaan voidaan lisätä myös omia muuttujia.
+                
+                extendausta, eli luokkaa jatketaan extendaamisella toiseen luokkaan, viitaten; Puhelin, Väri, Koko
+              </p>
+              <div class="codeArea">
+                <pre><code> 
+    //Periytymisellä pystyy käyttämään koodia uudelleen, lisätä siihen uusia luokkia ja muokata sitä.
+    class Puhelin {
+      constructor(merkki) {
+        this.puhelinM = merkki;
+      }
+      malli() {
+        return "Minulla on " + this.puhelinM;
+      }
+    }
+    
+    // Luokka Väri on jatkoa luokalle Puhelin
+    class Väri extends Puhelin {
+      constructor(merkki, väri) {
+        super(merkki);
+
+        // Väri luokka lisää värin puhelimen merkkiin
+        this.väri = väri;
+      }
+      vari() {
+        return this.malli() + ", se on " + this.väri;
+      }
+    }
+  
+    // Koko lisää ko'on puhelimen värille ja merkille
+    class Koko extends Väri {
+      constructor(merkki, väri, koko) {
+        super(merkki, väri);
+        this.koko = koko;
+      }
+      kaikki() {
+        return this.malli() + ", se on " + this.väri + ". Sen koko on " + this.koko;
+      }
+    }
+  
+    let kokoPuhelin = new Koko("Samsung", "vihreä", "18cm");
+    console.log(kokoPuhelin.malli());
+    console.log(kokoPuhelin.vari());
+    console.log(kokoPuhelin.kaikki());
+                </code></pre> 
+              </div>
+          </div>
+
+<!-- Konstruktori on metodi jolla alustetaan luokan muuttujat -->
+<!-- periytymä on extendausta, eli
+  luokkaa jatketaan extendaamisella toiseen luokkaan, viitaten; Puhelin, Väri, Koko -->
+
+
+    </div>
+    
 </body>
 </html>
+
+
+<!-- <div>
+  <form action="javascript:void(0);">
+    <input type="text" id="fname" placeholder="Etunimi" class="etunimi"><br>
+    <input type="text" id="lname" placeholder="Sukunimi" class="sukunimi"><br>
+    <input type="text" id="fname" placeholder="Ikä" class="ika"><br>
+    <input type="text" id="lname" placeholder="Silmänvari" class="silmanvari"><br>
+    <button type="submit" onclick="kysy()">Lähetä</button>
+</form>
+<p id="tulokset">Tähän tulee tulokset</p>
+</div>
+    <div class="codeArea">
+      <pre><code>
+        // Olio Person
+        function Person(first, last, age, eye) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eye;
+      }
+
+      //Kysyy Tarvittavan tiedon
+      function kysy() {
+              etunimi = String(document.getElementsByClassName("etunimi")[0].value);
+              sukunimi = String(document.getElementsByClassName("sukunimi")[0].value);
+              ika = String(document.getElementsByClassName("ika")[0].value);
+              silmavari = String(document.getElementsByClassName("silmanvari")[0].value);
+
+              // Yhdistää saadut arvot yhdeksi
+              var kayttaja = new Person(etunimi, sukunimi, ika, silmavari)
+              document.getElementById("tulokset").innerHTML = kayttaja.firstName + ", " + kayttaja.lastName +
+              ", " + kayttaja.age + ", " + kayttaja.eyeColor;
+      }
+      </code></pre>
+    </div> -->

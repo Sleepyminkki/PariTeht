@@ -1,0 +1,88 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: #252428;
+    color: white;
+    font-size: 18px;
+    scroll-behavior: smooth;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited, a:active{
+    color: white;
+}
+li a:hover{
+    color: red;
+}
+
+.alkuTietoTeksti{
+    line-height: 30px;
+    padding: 5px;
+}
+.linkArea{
+    background-color: #46444b;
+    height: 200px;
+}
+.flex{
+    width: 100%;
+    display: flex;
+    height: 250px;
+    margin-bottom: 10px;
+}
+.div1{
+    width: 75%;
+    height: 200px;
+}
+.div2 {
+    background-color: #46444b;
+    width: 25%;
+    height: 200px;
+}
+.tekstiosio{
+    padding: 1rem;
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    background-color: #3d3d3d;
+}
+.tekstiosionTekstiosio{
+    padding: 1rem;
+}
+.otsikko{
+    text-align: center;
+    font-size: 24px;
+}
+.section1 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 1px solid #040404;
+    border-radius: 20px;
+    margin: auto;
+    width: 80%;
+    height: fit-content;
+    margin-top: 20px;
+    
+}
+form{
+    padding: 10px;
+}
+.green {
+    color: rgb(7, 255, 7);
+}
+.codeArea{
+    font-family: monospace;
+    background-color: rgb(40, 40, 40);
+    color: rgb(51, 255, 51);
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    overflow: auto;
+    height: 100%;
+    font-size: 14px;
+}
