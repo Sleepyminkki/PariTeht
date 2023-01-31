@@ -152,22 +152,6 @@ function kysy() {
 }
 
 
-const oppilas = {
-  nimi: "Jaakko",
-  ika: 18,
-  silmienvari: "sininen"
-}
-
-// Lisää ominaisuuden
-oppilas.arvosana = "10";
-
-// Poistaa ominaisuuden
-delete oppilas.ika
-
-var teksti = document.getElementById("ominaisuuksia").innerHTML = 
-"Nimi: " + oppilas.nimi + " Ikä: " + oppilas.ika + " Silmienväri: " + oppilas["silmienvari"] + " Arvosana: " + oppilas["arvosana"];
-
-
 //
 const henkilo = {
 nimi: "kalle",
