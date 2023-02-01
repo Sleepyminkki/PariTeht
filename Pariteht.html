@@ -126,6 +126,9 @@
     constructor(name) {
       this.name = name;
     }
+    present() {
+      return 'Name is ' + this.name;
+    }
   }
   
   class Employee extends Visitor {
